@@ -137,7 +137,7 @@ nav.scrolled .nav-cta { background: var(--ink); color: var(--cream); }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('../images/hero-bg.jpg') center / cover no-repeat;
+  background: url('https://picsum.photos/1800/1000?random=1') center / cover no-repeat;
   opacity: 0.42;
   transform: scale(1.08);
   transition: transform 0.1s linear;
