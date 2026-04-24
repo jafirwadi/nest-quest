@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NestQuest — Luxury Real Estate</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════ -->
+  <nav id="nav">
+    <a href="#hero" class="nav-logo">NestQuest</a>
+    <ul class="nav-links">
+      <li><a href="#properties">Properties</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#testimonials">Stories</a></li>
+      <li><a href="#cta">Contact</a></li>
+    </ul>
+    <a href="#cta" class="nav-cta">Book Consultation</a>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════
+       S1: HERO
+  ═══════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-label">Luxury Residential · [City] Market</p>
+
+      <h1 class="hero-headline" id="heroHeadline">
+        Find the home that<br><em>finishes your story.</em>
+      </h1>
+
+      <p class="hero-sub">Luxury residential properties — handpicked for how you want to live, not just where.</p>
+
+      <div class="hero-search">
+        <div class="search-row">
+          <div class="search-field">
+            <label for="search-location">Location</label>
+            <input id="search-location" type="text" placeholder="Neighbourhood or city…">
+          </div>
+          <div class="search-field">
+            <label for="search-budget">Budget</label>
+            <select id="search-budget">
+              <option value="">Any price</option>
+              <option>Up to $1M</option>
+              <option>$1M – $3M</option>
+              <option>$3M – $7M</option>
+              <option>$7M+</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label for="search-type">Property Type</label>
+            <select id="search-type">
+              <option value="">All types</option>
+              <option>House</option>
+              <option>Apartment</option>
+              <option>Villa</option>
+              <option>Penthouse</option>
+            </select>
+          </div>
+          <button class="search-btn" onclick="document.getElementById('properties').scrollIntoView({behavior:'smooth'})">
+            Search →
+          </button>
+        </div>
+
+        <div class="hero-pills">
+          <span class="hero-pill active" onclick="setHeroPill(this)">House</span>
+          <span class="hero-pill" onclick="setHeroPill(this)">Apartment</span>
+          <span class="hero-pill" onclick="setHeroPill(this)">Villa</span>
+          <span class="hero-pill" onclick="setHeroPill(this)">Penthouse</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-cue">
+      <div class="chevron"></div>
+      Scroll to explore
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       S2: TRUST BAR
+  ═══════════════════════════════════════ -->
+  <section id="trust">
+    <div class="trust-inner">
+
+      <div class="stat-item">
+        <div class="stat-num" data-target="2400">0</div>
+        <div class="stat-label">Homes Sold</div>
+      </div>
+
+      <div class="trust-divider"></div>
+
+      <div class="stat-item">
+        <div class="stat-num" data-target="18">0</div>
+        <div class="stat-label">Years in Market</div>
+      </div>
+
+      <div class="trust-divider"></div>
+
+      <div class="stat-item">
+        <div class="stat-num" data-target="97">0</div>
+        <div class="stat-label">% Client Satisfaction</div>
+      </div>
+
+      <div class="trust-divider"></div>
+
+      <div class="stat-item">
+        <div class="stat-num" data-target="2.4" data-prefix="$" data-suffix="B">$0</div>
+        <div class="stat-label">In Sales Volume</div>
+      </div>
+
+    </div>
+
+    <div class="trust-logos">
+      <span class="trust-logo">Forbes Realty</span>
+      <span class="trust-logo">Luxury Portfolio</span>
+      <span class="trust-logo">Christie's RE</span>
+      <span class="trust-logo">Sotheby's</span>
+      <span class="trust-logo">WSJ Homes</span>
+      <span class="trust-logo">Architectural Digest</span>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       S3: PROBLEM → PROCESS
+  ═══════════════════════════════════════ -->
+  <section id="process">
+    <div class="process-inner">
+
+      <div class="process-left">
+        <p class="section-label-light">03 — Our Process</p>
+        <h2>Finding your home<br>shouldn't feel like<br>a <em>second job.</em></h2>
+        <p>Most buyers spend months overwhelmed by listings that don't fit, agents who don't listen, and a process that feels designed for everyone except them. We built NestQuest to be different — a curated, guided experience from first conversation to key handover.</p>
+        <p>We handle the complexity so you can focus on the excitement. Three steps. Zero overwhelm.</p>
+        <a href="#cta" class="process-cta">Start your journey <span class="process-cta-arrow">→</span></a>
+      </div>
+
+      <div class="process-right">
+        <div class="steps-list">
+          <div class="steps-line"></div>
+
+          <div class="step-item" id="step1">
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="7"/>
+                <path d="m21 21-4.35-4.35"/>
+              </svg>
+            </div>
+            <div class="step-body">
+              <div class="step-num">Step 01</div>
+              <h4>Discover</h4>
+              <p>We start with a deep-listen consultation. We map your lifestyle, priorities, and non-negotiables — not just bedrooms and budgets.</p>
+            </div>
+          </div>
+
+          <div class="step-item" id="step2">
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 11l3 3L22 4"/>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+              </svg>
+            </div>
+            <div class="step-body">
+              <div class="step-num">Step 02</div>
+              <h4>Match</h4>
+              <p>Our advisors shortlist properties — often off-market — that genuinely match your criteria. No inbox floods. Just quality.</p>
+            </div>
+          </div>
+
+          <div class="step-item" id="step3">
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <div class="step-body">
+              <div class="step-num">Step 03</div>
+              <h4>Move In</h4>
+              <p>From offer to completion, we manage every detail — legal, financial, logistics. You walk through the door with a smile, not stress.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       S4: FEATURED PROPERTIES
+  ═══════════════════════════════════════ -->
+  <section id="properties">
+    <div class="section-header">
+      <div class="section-header-left">
+        <div class="section-label">04 — Featured Properties</div>
+        <h2>Curated homes,<br><em>extraordinary lives</em></h2>
+      </div>
+      <a href="#" class="view-all-link">View all properties →</a>
+    </div>
+
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" onclick="filterProps(this,'all')">All</button>
+      <button class="filter-btn" onclick="filterProps(this,'buy')">Buy</button>
+      <button class="filter-btn" onclick="filterProps(this,'rent')">Rent</button>
+      <button class="filter-btn" onclick="filterProps(this,'invest')">Invest</button>
+      <button class="filter-btn" onclick="filterProps(this,'new')">New Build</button>
+    </div>
+
+    <div class="properties-grid" id="propsGrid">
+
+      <!-- FEATURED (hero card — spans 2 columns) -->
+      <div class="prop-card hero-card visible" data-type="buy">
+        <div class="prop-img" style="height:320px">
+          <img src="assets/images/prop-villa-serena.jpg" alt="Villa Serena — Hillside Retreat" loading="lazy">
+          <span class="prop-badge premium">New Listing</span>
+          <div class="prop-heart" onclick="toggleHeart(this)" aria-label="Save property">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <div class="prop-hover-overlay">
+            <button class="prop-view-btn">View Details</button>
+          </div>
+        </div>
+        <div class="prop-info">
+          <div class="prop-price">$4,850,000</div>
+          <div class="prop-title">Villa Serena — Hillside Retreat</div>
+          <div class="prop-location">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Bel Air, Los Angeles
+          </div>
+          <div class="prop-meta">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>6 bed</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M4 12v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6M4 12V9a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v3"/></svg>5 bath</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>6,200 sqft</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="prop-card visible" data-type="buy">
+        <div class="prop-img prop-img-default">
+          <img src="assets/images/prop-the-meridian.jpg" alt="The Meridian — Modern Classic" loading="lazy">
+          <span class="prop-badge">For Sale</span>
+          <div class="prop-heart" onclick="toggleHeart(this)" aria-label="Save property">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div class="prop-hover-overlay"><button class="prop-view-btn">View Details</button></div>
+        </div>
+        <div class="prop-info">
+          <div class="prop-price">$2,200,000</div>
+          <div class="prop-title">The Meridian — Modern Classic</div>
+          <div class="prop-location">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Pacific Palisades
+          </div>
+          <div class="prop-meta">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>4 bed</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M4 12v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6M4 12V9a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v3"/></svg>3 bath</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>3,400 sqft</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="prop-card visible" data-type="invest">
+        <div class="prop-img prop-img-default">
+          <img src="assets/images/prop-sky-residences.jpg" alt="Sky Residences — Penthouse 12A" loading="lazy">
+          <span class="prop-badge premium">Premium</span>
+          <div class="prop-heart" onclick="toggleHeart(this)" aria-label="Save property">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div class="prop-hover-overlay"><button class="prop-view-btn">View Details</button></div>
+        </div>
+        <div class="prop-info">
+          <div class="prop-price">$1,750,000</div>
+          <div class="prop-title">Sky Residences — Penthouse 12A</div>
+          <div class="prop-location">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Downtown, Beverly Hills
+          </div>
+          <div class="prop-meta">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>3 bed</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M4 12v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6M4 12V9a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v3"/></svg>2 bath</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>2,100 sqft</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="prop-card visible" data-type="rent">
+        <div class="prop-img prop-img-default">
+          <img src="assets/images/prop-garden-estate.jpg" alt="Garden Estate — Private Drive" loading="lazy">
+          <span class="prop-badge">For Rent</span>
+          <div class="prop-heart" onclick="toggleHeart(this)" aria-label="Save property">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div class="prop-hover-overlay"><button class="prop-view-btn">View Details</button></div>
+        </div>
+        <div class="prop-info">
+          <div class="prop-price">$18,500/mo</div>
+          <div class="prop-title">Garden Estate — Private Drive</div>
+          <div class="prop-location">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Malibu, California
+          </div>
+          <div class="prop-meta">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>5 bed</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M4 12v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6M4 12V9a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v3"/></svg>4 bath</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>4,800 sqft</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="prop-card visible" data-type="new">
+        <div class="prop-img prop-img-default">
+          <img src="assets/images/prop-copperleaf.jpg" alt="The Copperleaf — New Build" loading="lazy">
+          <span class="prop-badge premium">New Build</span>
+          <div class="prop-heart" onclick="toggleHeart(this)" aria-label="Save property">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div class="prop-hover-overlay"><button class="prop-view-btn">View Details</button></div>
+        </div>
+        <div class="prop-info">
+          <div class="prop-price">$3,100,000</div>
+          <div class="prop-title">The Copperleaf — New Build</div>
+          <div class="prop-location">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Calabasas, LA
+          </div>
+          <div class="prop-meta">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>5 bed</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M4 12v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6M4 12V9a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v3"/></svg>4 bath</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>4,200 sqft</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /properties-grid -->
+
+    <div class="properties-cta">
+      <a href="#" class="btn-outline">View All Properties →</a>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       S5: SERVICES
+  ═══════════════════════════════════════ -->
+  <section id="services">
+    <div class="services-inner">
+
+      <div class="section-header" style="margin-bottom:0">
+        <div class="section-header-left">
+          <div class="section-label">05 — Expert Services</div>
+          <h2>A path built<br><em>specifically for you</em></h2>
+        </div>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card" id="svc1">
+          <div class="service-card-inner">
+            <div class="service-card-img" style="background-image:url('assets/images/svc-buy.jpg')"></div>
+            <div class="service-card-body">
+              <div class="service-num">01</div>
+              <h3>Buy a Home</h3>
+              <p class="service-desc">Expert guidance from search to signature — with access to off-market listings your competition won't see.</p>
+              <a href="#cta" class="service-link">Learn more <span class="arr">→</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" id="svc2">
+          <div class="service-card-inner">
+            <div class="service-card-img" style="background-image:url('assets/images/svc-sell.jpg')"></div>
+            <div class="service-card-body">
+              <div class="service-num">02</div>
+              <h3>Sell Your Home</h3>
+              <p class="service-desc">Strategic pricing, premium marketing, and a network of qualified buyers — we maximise your return.</p>
+              <a href="#cta" class="service-link">Learn more <span class="arr">→</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" id="svc3">
+          <div class="service-card-inner">
+            <div class="service-card-img" style="background-image:url('assets/images/svc-invest.jpg')"></div>
+            <div class="service-card-body">
+              <div class="service-num">03</div>
+              <h3>Invest in Property</h3>
+              <p class="service-desc">Market data, ROI analysis, and portfolio advisory — for investors who demand more than just listings.</p>
+              <a href="#cta" class="service-link">Learn more <span class="arr">→</span></a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /services-grid -->
+
+      <div class="finance-card">
+        <div class="finance-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+        </div>
+        <div class="finance-item">
+          <h4>Home Loans &amp; Financing</h4>
+          <p>We connect you with preferred lenders for competitive rates and fast approvals.</p>
+        </div>
+        <div class="finance-item">
+          <p>Pre-approval in 48 hours. No obligation consultation. All credit profiles considered.</p>
+        </div>
+        <button class="finance-cta" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">
+          Explore Financing
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       S6: TESTIMONIALS
+  ═══════════════════════════════════════ -->
+  <section id="testimonials">
+    <div class="testimonials-inner">
+
+      <div class="section-header" style="margin-bottom:0">
+        <div class="section-header-left">
+          <div class="section-label">06 — Client Stories</div>
+          <h2>Stories from<br><em>our community</em></h2>
+        </div>
+      </div>
+
+      <div class="testi-track-wrap">
+        <div class="testi-track" id="testiTrack">
+
+          <div class="testi-card active">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <div class="stars" aria-label="5 out of 5 stars">
+              <span class="star"></span><span class="star"></span><span class="star"></span>
+              <span class="star"></span><span class="star"></span>
+            </div>
+            <p class="testi-quote">"We were nervous about the timeline — we needed to sell and buy simultaneously. NestQuest handled both sides seamlessly. We never felt caught between two transactions. It was the most organised process we'd experienced."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" aria-hidden="true">SR</div>
+              <div>
+                <div class="testi-name">Sarah &amp; Richard Hollis</div>
+                <div class="testi-location">Bought in Pacific Palisades · 2024</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <div class="stars" aria-label="5 out of 5 stars">
+              <span class="star"></span><span class="star"></span><span class="star"></span>
+              <span class="star"></span><span class="star"></span>
+            </div>
+            <p class="testi-quote">"As an investor, I've worked with three agencies over the years. NestQuest is the only one that came to the first meeting with actual market data, not just enthusiasm. They found me a property with 11% projected yield that I never would have found alone."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" aria-hidden="true">DK</div>
+              <div>
+                <div class="testi-name">David Kim</div>
+                <div class="testi-location">Investment Portfolio · Los Angeles</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <div class="stars" aria-label="5 out of 5 stars">
+              <span class="star"></span><span class="star"></span><span class="star"></span>
+              <span class="star"></span><span class="star"></span>
+            </div>
+            <p class="testi-quote">"I'd been searching for 14 months on my own. NestQuest shortlisted three properties in two weeks — one of which I hadn't seen anywhere. We made an offer on it within 48 hours. The whole thing felt like it was designed for me."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" aria-hidden="true">LP</div>
+              <div>
+                <div class="testi-name">Lauren Pierce</div>
+                <div class="testi-location">Bought in Bel Air · 2024</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <div class="stars" aria-label="5 out of 5 stars">
+              <span class="star"></span><span class="star"></span><span class="star"></span>
+              <span class="star"></span><span class="star"></span>
+            </div>
+            <p class="testi-quote">"We relocated from London and had exactly three weeks to find and secure a property. The NestQuest team made what should have been a nightmare into the smoothest decision of our lives. Our advisor felt like an old friend by the end."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" aria-hidden="true">JM</div>
+              <div>
+                <div class="testi-name">James &amp; Mia Crawford</div>
+                <div class="testi-location">Relocated from London · Malibu</div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /testi-track -->
+      </div><!-- /testi-track-wrap -->
+
+      <div class="testi-controls">
+        <button class="testi-nav-btn" id="testiPrev" onclick="slideTestimonials(-1)" aria-label="Previous testimonial">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="testi-nav-btn" id="testiNext" onclick="slideTestimonials(1)" aria-label="Next testimonial">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+        <div class="testi-dots" id="testiDots" role="tablist" aria-label="Testimonial navigation">
+          <div class="testi-dot active" onclick="goToSlide(0)" role="tab" aria-label="Testimonial 1"></div>
+          <div class="testi-dot" onclick="goToSlide(1)" role="tab" aria-label="Testimonial 2"></div>
+          <div class="testi-dot" onclick="goToSlide(2)" role="tab" aria-label="Testimonial 3"></div>
+          <div class="testi-dot" onclick="goToSlide(3)" role="tab" aria-label="Testimonial 4"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       S7: FINAL CTA
+  ═══════════════════════════════════════ -->
+  <section id="cta">
+    <div class="cta-inner">
+
+      <div class="cta-left">
+        <p class="section-label-light">07 — Let's Talk</p>
+        <h2>Ready to take<br>the first step?<br><em>Let's talk.</em></h2>
+        <p>No pressure. No spam. Just a genuine conversation about what you're looking for — and how we can help you find it.</p>
+        <div class="availability-badge">
+          <span class="avail-dot" aria-hidden="true"></span>
+          Advisors available now
+        </div>
+        <div class="cta-phone-block">
+          <div class="cta-phone-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="cta-phone-label">Prefer to call?</div>
+            <div class="cta-phone-num">+1 800 NEST QST</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-form">
+        <div class="cta-form-fields" id="ctaFormFields">
+          <div class="form-row">
+            <label for="ctaName">Your Name</label>
+            <input type="text" id="ctaName" placeholder="First and last name" autocomplete="name">
+          </div>
+          <div class="form-row">
+            <label for="ctaEmail">Email Address</label>
+            <input type="email" id="ctaEmail" placeholder="you@email.com" autocomplete="email">
+          </div>
+          <div class="form-row">
+            <label for="ctaIntent">What are you looking to do?</label>
+            <select id="ctaIntent">
+              <option value="">Select your goal…</option>
+              <option>Buy a home</option>
+              <option>Sell my home</option>
+              <option>Invest in property</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <button class="cta-submit" onclick="submitCTA()">Book My Free Consultation</button>
+          <p class="cta-trust-copy">No spam. No pressure. Just a conversation.</p>
+        </div>
+
+        <div class="form-success" id="formSuccess" role="alert">
+          <div class="success-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h4>You're all set.</h4>
+          <p>We'll be in touch within one business day. Check your inbox for a confirmation.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <div class="logo">NestQuest</div>
+          <p>Luxury residential real estate in Los Angeles and beyond. Handpicked properties for how you want to live.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Properties</h5>
+          <ul>
+            <li><a href="#">Buy</a></li>
+            <li><a href="#">Rent</a></li>
+            <li><a href="#">Invest</a></li>
+            <li><a href="#">New Builds</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="#">Buying Guide</a></li>
+            <li><a href="#">Selling</a></li>
+            <li><a href="#">Financing</a></li>
+            <li><a href="#">Relocation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+      </div><!-- /footer-top -->
+
+      <div class="footer-bottom">
+        <p>© 2025 NestQuest. All rights reserved. Licensed Real Estate Brokerage.</p>
+        <p><a href="#" style="color:inherit;text-decoration:none">Privacy Policy</a> · <a href="#" style="color:inherit;text-decoration:none">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Script — loaded last so the DOM is ready -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
